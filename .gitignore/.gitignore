@@ -1,0 +1,36 @@
+# Archivos y carpetas comunes a ignorar
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de editores
+*.log
+*.tmp
+*.bak
+*.swp
+
+# VS Code
+.vscode/
+
+# Composer (si usas más adelante)
+vendor/
+composer.lock
+
+# Archivos de entorno
+.env
+
+# Configuración local
+*.sublime-*
+*.code-workspace
+
+# XAMPP o configuraciones específicas del sistema
+xampp/
+htdocs/
+
+# Archivos del sistema operativo
+desktop.ini
+
+# Cache o archivos generados automáticamente
+cache/
+node_modules/
