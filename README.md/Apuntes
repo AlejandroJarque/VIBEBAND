@@ -1,0 +1,15 @@
+Banda_app/
+├── config/
+│   ├── db.php              ← conexión a la base de datos
+│   └── test_db.php         ← script de prueba de conexión
+├── public/
+│   └── index.php           ← punto de entrada principal de la app (lo que carga el navegador)
+├── views/
+│   └── register_band.php   ← formulario para registrar bandas
+├── controllers/
+│   └── BandController.php  ← lógica del backend (recibe datos y los procesa)
+├── models/
+│   └── Band.php            ← interacción con la base de datos (insertar, listar bandas, etc.)
+├── assets/
+│   └── css/
+│       └── style.css       ← estilos (moderno con toque vintage)
