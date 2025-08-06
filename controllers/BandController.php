@@ -2,6 +2,9 @@
 require_once __DIR__.'/../models/Band.php';
 
 class BandController { 
+    public function showForm() {
+        include __DIR__. '/../views/register_band.php';
+    }
     public function register() {
          if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nombre_banda = trim($_POST['nombre_banda']?? '');
@@ -23,14 +26,14 @@ class BandController {
         $hashedPassword = password_hash($contraseña, PASSWORD_DEFAULT);
 
         $band = new Band();
-        $success = $band->insertBand([
-                'nombre_banda'    => $nombre_banda,
-                'email'           => $email,
-                'contraseña'      => $hashedPassword,
-                'estilo_musica'   => $estilo_musica,
-                'formacion'       => $formacion,
-                'objetivos'       => $objetivos
-        ]);
+        $success = $band->insertBand(
+                $nombre_banda,
+                $email,
+                $hashedPassword,
+                $estilo_musica,
+                $formacion,
+                $objetivos
+        );
 
         if($success) {
             echo "<p>Banda registrada exitosamente.</p>";
