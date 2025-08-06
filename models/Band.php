@@ -20,19 +20,19 @@ class Band {
         }
     }
 
-    public function insertBand($nombre_banda, $email, $hashedPassword, $estilo_musica, $formacion, $objetivos) {
+    public function insertBand($data) {
         $sql = "INSERT INTO bandas (nombre_banda, email, contraseña, estilo_musica, formacion, objetivos)
-                VALUES (:nombre_banda, :email, :contraseña, estilo_musica, :formacion, :objetivos)";
+                VALUES (:nombre_banda, :email, :contraseña, :estilo_musica, :formacion, :objetivos)";
 
         $stmt = $this ->pdo->prepare($sql);
 
         return $stmt ->execute([
-            ':nombre_banda' => $nombre_banda,
-            ':email' => $email,
-            ':contraseña' => $hashedPassword,
-            ':estilo_musica' => $estilo_musica,
-            ':formacion' => $formacion,
-            ':objetivos' => $objetivos,
+              ':nombre_banda'   => $data['nombre_banda'],
+        ':email'          => $data['email'],
+        ':contraseña'     => $data['contraseña'],
+        ':estilo_musica'  => $data['estilo_musica'],
+        ':formacion'      => $data['formacion'],
+        ':objetivos'      => $data['objetivos'],
         ]);
     }
 }

@@ -1,3 +1,4 @@
+
 Banda_app/
 ├── config/
 │   ├── db.php              ← conexión a la base de datos (PDO)
