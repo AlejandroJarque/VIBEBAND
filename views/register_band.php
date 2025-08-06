@@ -1,6 +1,7 @@
 <?php
 $error = '';
-$success = ''; 
+$success = '';
+ 
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre_banda = trim($_POST['nombre_banda'] ?? '');
@@ -36,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php if($error): ?>
         <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
-    <?php elseif($succes): ?>
+    <?php elseif($success): ?>
         <p style="color:green;"><?php echo htmlspecialchars($succes); ?></p>
     <?php endif; ?>
 
