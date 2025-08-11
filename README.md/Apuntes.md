@@ -1,6 +1,7 @@
 # VIBEBAND
 
-**VIBEBAND** es un proyecto en desarrollo orientado a la creación de una plataforma musical inteligente.  
+**VIBEBAND** 
+Es un proyecto en desarrollo orientado a la creación de una plataforma musical inteligente.  
 Su objetivo es ofrecer una experiencia personalizada de gestión, reproducción y recomendación de música,  
 integrando funciones adaptadas a las necesidades del usuario.
 
@@ -8,8 +9,9 @@ Este repositorio contiene el código fuente, la configuración y los recursos ne
 
 ## Estructura de carpetas
 VIBEBAND/
-├── config/                    # Configuraciones, conexión a BD, variables globales
-│   └── db.php
+├── config/                   # Configuraciones, conexión a BD, variables globales
+│   ├── db.php                # Configuración y clase para conexión a BD                                (listo)
+│   └── test_db.php           # Script para testear conexión a la base de datos                         (listo)
 │
 ├── public/                    # Archivos accesibles desde el navegador (punto de entrada)
 │   ├── index.php              # Controlador frontal (router básico)
@@ -37,5 +39,5 @@ VIBEBAND/
 │
 ├── vendor/                    # Dependencias (si usas Composer)
 │
-├── .gitignore                 # Para ignorar archivos en Git                                                         (listo)
-└── README.md                  # Documentación general del proyecto                                                   (listo)
+├── .gitignore                 # Para ignorar archivos en Git                                           (listo)
+└── README.md                  # Documentación general del proyecto                                     (listo)
